@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/progects/c++/Lab-4/CSVParser.cpp
+CSVParser.h
+C:/progects/c++/Lab-4/CSVParser.h
+iostream
+-
+
+C:/progects/c++/Lab-4/CSVParser.h
+string
+-
+fstream
+-
+memory
+-
+vector
+-
+
