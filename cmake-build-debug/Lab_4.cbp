@@ -89,6 +89,39 @@
 		<Unit filename="C:/progects/c++/Lab-4/CSVParser.h">
 			<Option target="Lab_4"/>
 		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.h">
+			<Option target="Lab_4"/>
+		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/main.cpp">
 			<Option target="Lab_4"/>
 		</Unit>

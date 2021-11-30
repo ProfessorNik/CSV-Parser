@@ -10,6 +10,8 @@
 #include <memory>
 #include <vector>
 #include "CSVLineParser.h"
+#include "CSVParserParametrs/CSVStringCellMaker.h"
+#include "CSVParserParametrs/CSVStringCellMakerImpl.h"
 
 
 template<class... Args>
@@ -44,7 +46,7 @@ public:
     InputIterator end();
 
 private:
-
+    std::shared_ptr<CSVStringCellMaker> maker;
     std::vector<std::tuple<Args...>> table;
     std::ifstream file;
     int skipFirsLinesCount{};
@@ -52,16 +54,14 @@ private:
 
     void customizeInputStream(const std::string& fileName);
 
-
     void goToBeginningFile();
 
     void parseFile();
 
-    std::tuple<Args...> makeNextRow();
 };
 
 template<class... Args>
-CSVParser<Args...>::CSVParser(const std::string &fileName, int skipFirstLinesCount) {
+CSVParser<Args...>::CSVParser(const std::string &fileName, int skipFirstLinesCount) : maker(new CSVStringCellMakerImpl){
     customizeInputStream(fileName);
     parseFile();
 }
@@ -113,18 +113,9 @@ typename CSVParser<Args...>::InputIterator CSVParser<Args...>::end() {
 template<class... Args>
 void CSVParser<Args...>::parseFile() {
     goToBeginningFile();
-    while (!file.eof()){
-        table.push_back(makeNextRow());
-    }
-}
-
-template<class... Args>
-std::tuple<Args...> CSVParser<Args...>::makeNextRow() {
-    std::string str;
-    std::getline(file, str);
-    CSVLineParser<Args...> parser(str);
+    CSVLineParser<Args...> parser(maker, file);
     parser.parse();
-    return parser.getRow();
+    table = parser.getTable();
 }
 
 template<class... Args>

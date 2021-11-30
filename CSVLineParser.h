@@ -8,57 +8,79 @@
 #include <tuple>
 #include <string>
 #include <sstream>
+#include <utility>
+#include "CSVParserParametrs/CSVStringCellMaker.h"
 
 template <class... Args>
 class CSVLineParser {
 public:
     void parse(){
+        while (!eof()) {
+            flag = true;
+            std::tuple<Args...> cells;
+            parseCell<0>(cells);
+            table.push_back(cells);
+        }
+    }
+    const std::vector<std::tuple<Args...> > &getTable() const {
+        return table;
+    }
+
+
+    explicit CSVLineParser(std::shared_ptr<CSVStringCellMaker> maker, std::ifstream& file) : maker(std::move(maker)), file(file){
         it = line.begin();
-        parseCell<0>();
-    }
-    const std::tuple<Args...> &getRow() const {
-        return cells;
     }
 
 
-    explicit CSVLineParser(const std::string& line){
-        this->line = line;
-    }
 
 private:
     std::string line;
-    std::tuple<Args...> cells;
+
     std::string::iterator it;
+    std::shared_ptr<CSVStringCellMaker> maker;
+    std::ifstream& file;
+    std::vector<std::tuple<Args...> > table;
+    bool flag;
+
+    char getNextCharacter(){
+        if(it == line.end()) {
+            std::getline(file, line);
+            line.push_back('\n');
+            it = line.begin();
+        }
+        return *(it++);
+    }
+
+    bool eof(){
+        return it == line.end() && file.eof();
+    }
 
     template<size_t n>
-    typename std::enable_if<(n < sizeof...(Args))>::type parseCell(){
-        std::string timeLine;
-        if(it == line.end()){
-            pushValue<n>(timeLine);
-        }
-        while(it != line.end()){
-            if(*it == ','){
-                pushValue<n>(timeLine);
-                ++it;
-                parseCell<n+1>();
-            } else {
-                timeLine.push_back(*it);
-                it++;
-                if(it == line.end()){
-                    pushValue<n>(timeLine);
-                }
+    typename std::enable_if<(n < sizeof...(Args))>::type parseCell(std::tuple<Args...>& cells){
+        while (flag && !eof()){
+            auto ch = getNextCharacter();
+            maker->push(ch);
+            if(maker->hasCellMade()) {
+                pushValue<n>(cells, maker->getCellValue());
+                parseCell<n+1>(cells);
+            }
+            else if(maker->hasRowEnd()){
+                pushValue<n>(cells, maker->getCellValue());
+                flag = false;
             }
         }
     }
+
     template<size_t n>
-    void pushValue(const std::string& str){
+    void pushValue(std::tuple<Args...>& cells, const std::string& str){
         std::stringstream stream(str);
         stream.exceptions(std::stringstream::failbit);
+
         stream >> std::get<n>(cells);
     }
 
     template<size_t n>
-    typename std::enable_if<(n >= sizeof...(Args))>::type parseCell(){
+    [[noreturn]] typename std::enable_if<(n >= sizeof...(Args))>::type parseCell(std::tuple<Args...>& cells){
         throw std::invalid_argument("bad argument");
     }
 

@@ -3,8 +3,33 @@
 
 CMakeFiles/Lab_4.dir/CSVParser.cpp.obj: \
  ../CSVParser.cpp
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj: \
+ ../CSVParserParametrs/CSVStringCellMaker.h \
+ ../CSVParserParametrs/CSVStringCellMakerImpl.cpp \
+ ../CSVParserParametrs/CSVStringCellMakerImpl.h \
+ ../CSVParserParametrs/ColumnSeparatorCharacter.h \
+ ../CSVParserParametrs/RowSeparatorCharacter.h \
+ ../CSVParserParametrs/ShieldingWatcher.h \
+ ../CSVParserParametrs/StringCellMakerException.h
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj: \
+ ../CSVParserParametrs/ColumnSeparatorCharacter.cpp \
+ ../CSVParserParametrs/ColumnSeparatorCharacter.h
+CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj: \
+ ../CSVParserParametrs/RowSeparatorCharacter.cpp \
+ ../CSVParserParametrs/RowSeparatorCharacter.h
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj: \
+ ../CSVParserParametrs/ShieldingWatcher.cpp \
+ ../CSVParserParametrs/ShieldingWatcher.h
+CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj: \
+ ../CSVParserParametrs/StringCellMakerException.cpp \
+ ../CSVParserParametrs/StringCellMakerException.h
 CMakeFiles/Lab_4.dir/main.cpp.obj: \
  ../CSVLineParser.h \
  ../CSVParser.h \
+ ../CSVParserParametrs/CSVStringCellMaker.h \
+ ../CSVParserParametrs/CSVStringCellMakerImpl.h \
+ ../CSVParserParametrs/ColumnSeparatorCharacter.h \
+ ../CSVParserParametrs/RowSeparatorCharacter.h \
+ ../CSVParserParametrs/ShieldingWatcher.h \
  ../main.cpp \
  ../tupleout.h

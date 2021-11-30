@@ -91,21 +91,96 @@ CMakeFiles/Lab_4.dir/CSVParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParser.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParser.cpp -o CMakeFiles\Lab_4.dir\CSVParser.cpp.s
 
+CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj: CMakeFiles/Lab_4.dir/flags.make
+CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj: ../CSVParserParametrs/RowSeparatorCharacter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_4.dir\CSVParserParametrs\RowSeparatorCharacter.cpp.obj -c C:\progects\c++\Lab-4\CSVParserParametrs\RowSeparatorCharacter.cpp
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\progects\c++\Lab-4\CSVParserParametrs\RowSeparatorCharacter.cpp > CMakeFiles\Lab_4.dir\CSVParserParametrs\RowSeparatorCharacter.cpp.i
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParserParametrs\RowSeparatorCharacter.cpp -o CMakeFiles\Lab_4.dir\CSVParserParametrs\RowSeparatorCharacter.cpp.s
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj: CMakeFiles/Lab_4.dir/flags.make
+CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj: ../CSVParserParametrs/StringCellMakerException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_4.dir\CSVParserParametrs\StringCellMakerException.cpp.obj -c C:\progects\c++\Lab-4\CSVParserParametrs\StringCellMakerException.cpp
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\progects\c++\Lab-4\CSVParserParametrs\StringCellMakerException.cpp > CMakeFiles\Lab_4.dir\CSVParserParametrs\StringCellMakerException.cpp.i
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParserParametrs\StringCellMakerException.cpp -o CMakeFiles\Lab_4.dir\CSVParserParametrs\StringCellMakerException.cpp.s
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj: CMakeFiles/Lab_4.dir/flags.make
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj: ../CSVParserParametrs/ColumnSeparatorCharacter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_4.dir\CSVParserParametrs\ColumnSeparatorCharacter.cpp.obj -c C:\progects\c++\Lab-4\CSVParserParametrs\ColumnSeparatorCharacter.cpp
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\progects\c++\Lab-4\CSVParserParametrs\ColumnSeparatorCharacter.cpp > CMakeFiles\Lab_4.dir\CSVParserParametrs\ColumnSeparatorCharacter.cpp.i
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParserParametrs\ColumnSeparatorCharacter.cpp -o CMakeFiles\Lab_4.dir\CSVParserParametrs\ColumnSeparatorCharacter.cpp.s
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj: CMakeFiles/Lab_4.dir/flags.make
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj: ../CSVParserParametrs/ShieldingWatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_4.dir\CSVParserParametrs\ShieldingWatcher.cpp.obj -c C:\progects\c++\Lab-4\CSVParserParametrs\ShieldingWatcher.cpp
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\progects\c++\Lab-4\CSVParserParametrs\ShieldingWatcher.cpp > CMakeFiles\Lab_4.dir\CSVParserParametrs\ShieldingWatcher.cpp.i
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParserParametrs\ShieldingWatcher.cpp -o CMakeFiles\Lab_4.dir\CSVParserParametrs\ShieldingWatcher.cpp.s
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj: CMakeFiles/Lab_4.dir/flags.make
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj: ../CSVParserParametrs/CSVStringCellMakerImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Lab_4.dir\CSVParserParametrs\CSVStringCellMakerImpl.cpp.obj -c C:\progects\c++\Lab-4\CSVParserParametrs\CSVStringCellMakerImpl.cpp
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\progects\c++\Lab-4\CSVParserParametrs\CSVStringCellMakerImpl.cpp > CMakeFiles\Lab_4.dir\CSVParserParametrs\CSVStringCellMakerImpl.cpp.i
+
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\progects\c++\Lab-4\CSVParserParametrs\CSVStringCellMakerImpl.cpp -o CMakeFiles\Lab_4.dir\CSVParserParametrs\CSVStringCellMakerImpl.cpp.s
+
 # Object files for target Lab_4
 Lab_4_OBJECTS = \
 "CMakeFiles/Lab_4.dir/main.cpp.obj" \
-"CMakeFiles/Lab_4.dir/CSVParser.cpp.obj"
+"CMakeFiles/Lab_4.dir/CSVParser.cpp.obj" \
+"CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj" \
+"CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj" \
+"CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj" \
+"CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj" \
+"CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj"
 
 # External object files for target Lab_4
 Lab_4_EXTERNAL_OBJECTS =
 
 Lab_4.exe: CMakeFiles/Lab_4.dir/main.cpp.obj
 Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParser.cpp.obj
+Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj
+Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj
+Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj
+Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj
+Lab_4.exe: CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj
 Lab_4.exe: CMakeFiles/Lab_4.dir/build.make
 Lab_4.exe: CMakeFiles/Lab_4.dir/linklibs.rsp
 Lab_4.exe: CMakeFiles/Lab_4.dir/objects1.rsp
 Lab_4.exe: CMakeFiles/Lab_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Lab_4.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\progects\c++\Lab-4\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Lab_4.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Lab_4.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

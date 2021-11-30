@@ -6,43 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/progects/c++/Lab-4/CSVLineParser.h
-tuple
--
-string
--
-sstream
--
+C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.cpp
+ShieldingWatcher.h
+C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
 
-C:/progects/c++/Lab-4/CSVParser.h
-string
--
-fstream
--
-memory
--
-vector
--
-CSVLineParser.h
-C:/progects/c++/Lab-4/CSVLineParser.h
-
-C:/progects/c++/Lab-4/main.cpp
-iostream
--
-tuple
--
-vector
--
-string
--
-ostream
--
-tupleout.h
-C:/progects/c++/Lab-4/tupleout.h
-CSVParser.h
-C:/progects/c++/Lab-4/CSVParser.h
-CSVLineParser.h
-C:/progects/c++/Lab-4/CSVLineParser.h
-
-C:/progects/c++/Lab-4/tupleout.h
+C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
 
