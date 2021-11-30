@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/progects/c++/Lab-4/CSVLineParser.h">
+			<Option target="Lab_4"/>
+		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CSVParser.cpp">
 			<Option target="Lab_4"/>
 		</Unit>
@@ -87,6 +90,9 @@
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/main.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/tupleout.h">
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CMakeLists.txt">

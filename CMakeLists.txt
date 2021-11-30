@@ -3,4 +3,4 @@ project(Lab_4)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(Lab_4 main.cpp CSVParser.cpp CSVParser.h)
+add_executable(Lab_4 main.cpp CSVParser.cpp CSVParser.h tupleout.h CSVLineParser.h)
