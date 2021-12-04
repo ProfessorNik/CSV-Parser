@@ -2,17 +2,17 @@
 // Created by nikol on 30.11.2021.
 //
 
-#ifndef LAB_4_CSVSTRINGCELLMAKERIMPL_H
-#define LAB_4_CSVSTRINGCELLMAKERIMPL_H
+#ifndef LAB_4_CSVSTRINGCELLMAKER_H
+#define LAB_4_CSVSTRINGCELLMAKER_H
 
 #include "CSVCellMaker.h"
 #include "RowSeparatorCharacter.h"
 #include "ColumnSeparatorCharacter.h"
 #include "ShieldingWatcher.h"
 
-class CSVStringCellMakerImpl : public CSVCellMaker{
+class CSVStringCellMaker : public CSVCellMaker{
 public:
-    CSVStringCellMakerImpl();
+    CSVStringCellMaker();
 
     bool hasCellMade() override;
     bool hasRowEnd() override;
@@ -34,4 +34,4 @@ private:
 };
 
 
-#endif //LAB_4_CSVSTRINGCELLMAKERIMPL_H
+#endif //LAB_4_CSVSTRINGCELLMAKER_H

@@ -2,4 +2,4 @@
 // Created by nikol on 30.11.2021.
 //
 
-#include "StringCellMakerException.h"
+#include "CellMakeException.h"

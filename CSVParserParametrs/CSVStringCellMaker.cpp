@@ -2,30 +2,33 @@
 // Created by nikol on 30.11.2021.
 //
 
-#include "CSVStringCellMakerImpl.h"
-#include "StringCellMakerException.h"
+#include "CSVStringCellMaker.h"
+#include "CellMakeException.h"
 
-CSVStringCellMakerImpl::CSVStringCellMakerImpl() {
+CSVStringCellMaker::CSVStringCellMaker() {
     cellMade = false;
     rowEnd = false;
 }
 
-bool CSVStringCellMakerImpl::hasCellMade() {
+bool CSVStringCellMaker::hasCellMade() {
     return cellMade;
 }
 
-bool CSVStringCellMakerImpl::hasRowEnd() {
+bool CSVStringCellMaker::hasRowEnd() {
     return rowEnd;
 }
 
-void CSVStringCellMakerImpl::push(char value) {
+void CSVStringCellMaker::push(char value) {
     if(rowEnd)
-        throw StringCellMakerException("error pushing character, row is end");
+        throw CellMakeException("error pushing character, row is end");
     if(cellMade)
-        throw StringCellMakerException("error pushing character, cell is made");
+        throw CellMakeException("error pushing character, cell is made");
 
     shieldingWatcher.pushCharacter(value);
     if(shieldingWatcher.isShieldingText()){
+        if(rowSep.isSeparator(value)){
+            throw CellMakeException("error shielding, the shielding space is not closed");
+        }
         if(!shieldingWatcher.isShieldingCharacter(value))
             cell.push_back(value);
     }
@@ -42,7 +45,7 @@ void CSVStringCellMakerImpl::push(char value) {
     }
 }
 
-std::string CSVStringCellMakerImpl::getCellValue() {
+std::string CSVStringCellMaker::getCellValue() {
     std::string tmp = cell;
     cell.clear();
     rowEnd = false;
@@ -50,15 +53,15 @@ std::string CSVStringCellMakerImpl::getCellValue() {
     return tmp;
 }
 
-void CSVStringCellMakerImpl::setRowSeparator(char ch) {
+void CSVStringCellMaker::setRowSeparator(char ch) {
     rowSep.setSeparator(ch);
 }
 
-void CSVStringCellMakerImpl::setColumnSeparator(char ch) {
+void CSVStringCellMaker::setColumnSeparator(char ch) {
     columnSep.setSeparator(ch);
 }
 
-void CSVStringCellMakerImpl::setShieldingCharacter(char ch) {
+void CSVStringCellMaker::setShieldingCharacter(char ch) {
     shieldingWatcher.setShieldingCharacter(ch);
 }
 

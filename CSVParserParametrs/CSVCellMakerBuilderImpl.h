@@ -7,7 +7,7 @@
 
 
 #include "CSVCellMakerBuilder.h"
-#include "CSVStringCellMakerImpl.h"
+#include "CSVStringCellMaker.h"
 
 class CSVCellMakerBuilderImpl : public CSVCellMakerBuilder {
 public:
@@ -19,7 +19,7 @@ public:
     std::shared_ptr<CSVCellMaker> build() override;
 
 private:
-    std::shared_ptr<CSVStringCellMakerImpl> maker;
+    std::shared_ptr<CSVStringCellMaker> maker;
 };
 
 

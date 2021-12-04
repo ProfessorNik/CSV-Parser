@@ -128,30 +128,6 @@ Lab_4/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/build
 .PHONY : Lab_4/fast
 
-CSVParser.obj: CSVParser.cpp.obj
-.PHONY : CSVParser.obj
-
-# target to build an object file
-CSVParser.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParser.cpp.obj
-.PHONY : CSVParser.cpp.obj
-
-CSVParser.i: CSVParser.cpp.i
-.PHONY : CSVParser.i
-
-# target to preprocess a source file
-CSVParser.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParser.cpp.i
-.PHONY : CSVParser.cpp.i
-
-CSVParser.s: CSVParser.cpp.s
-.PHONY : CSVParser.s
-
-# target to generate assembly for a file
-CSVParser.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParser.cpp.s
-.PHONY : CSVParser.cpp.s
-
 CSVParserParametrs/CSVCellMakerBuilderImpl.obj: CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.obj
 .PHONY : CSVParserParametrs/CSVCellMakerBuilderImpl.obj
 
@@ -176,29 +152,53 @@ CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.s
 .PHONY : CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.s
 
-CSVParserParametrs/CSVStringCellMakerImpl.obj: CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.obj
+CSVParserParametrs/CSVStringCellMaker.obj: CSVParserParametrs/CSVStringCellMaker.cpp.obj
+.PHONY : CSVParserParametrs/CSVStringCellMaker.obj
 
 # target to build an object file
-CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj
+CSVParserParametrs/CSVStringCellMaker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMaker.cpp.obj
+.PHONY : CSVParserParametrs/CSVStringCellMaker.cpp.obj
 
-CSVParserParametrs/CSVStringCellMakerImpl.i: CSVParserParametrs/CSVStringCellMakerImpl.cpp.i
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.i
+CSVParserParametrs/CSVStringCellMaker.i: CSVParserParametrs/CSVStringCellMaker.cpp.i
+.PHONY : CSVParserParametrs/CSVStringCellMaker.i
 
 # target to preprocess a source file
-CSVParserParametrs/CSVStringCellMakerImpl.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.i
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.cpp.i
+CSVParserParametrs/CSVStringCellMaker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMaker.cpp.i
+.PHONY : CSVParserParametrs/CSVStringCellMaker.cpp.i
 
-CSVParserParametrs/CSVStringCellMakerImpl.s: CSVParserParametrs/CSVStringCellMakerImpl.cpp.s
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.s
+CSVParserParametrs/CSVStringCellMaker.s: CSVParserParametrs/CSVStringCellMaker.cpp.s
+.PHONY : CSVParserParametrs/CSVStringCellMaker.s
 
 # target to generate assembly for a file
-CSVParserParametrs/CSVStringCellMakerImpl.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.s
-.PHONY : CSVParserParametrs/CSVStringCellMakerImpl.cpp.s
+CSVParserParametrs/CSVStringCellMaker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMaker.cpp.s
+.PHONY : CSVParserParametrs/CSVStringCellMaker.cpp.s
+
+CSVParserParametrs/CellMakeException.obj: CSVParserParametrs/CellMakeException.cpp.obj
+.PHONY : CSVParserParametrs/CellMakeException.obj
+
+# target to build an object file
+CSVParserParametrs/CellMakeException.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CellMakeException.cpp.obj
+.PHONY : CSVParserParametrs/CellMakeException.cpp.obj
+
+CSVParserParametrs/CellMakeException.i: CSVParserParametrs/CellMakeException.cpp.i
+.PHONY : CSVParserParametrs/CellMakeException.i
+
+# target to preprocess a source file
+CSVParserParametrs/CellMakeException.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CellMakeException.cpp.i
+.PHONY : CSVParserParametrs/CellMakeException.cpp.i
+
+CSVParserParametrs/CellMakeException.s: CSVParserParametrs/CellMakeException.cpp.s
+.PHONY : CSVParserParametrs/CellMakeException.s
+
+# target to generate assembly for a file
+CSVParserParametrs/CellMakeException.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/CellMakeException.cpp.s
+.PHONY : CSVParserParametrs/CellMakeException.cpp.s
 
 CSVParserParametrs/ColumnSeparatorCharacter.obj: CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj
 .PHONY : CSVParserParametrs/ColumnSeparatorCharacter.obj
@@ -272,30 +272,6 @@ CSVParserParametrs/ShieldingWatcher.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.s
 .PHONY : CSVParserParametrs/ShieldingWatcher.cpp.s
 
-CSVParserParametrs/StringCellMakerException.obj: CSVParserParametrs/StringCellMakerException.cpp.obj
-.PHONY : CSVParserParametrs/StringCellMakerException.obj
-
-# target to build an object file
-CSVParserParametrs/StringCellMakerException.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj
-.PHONY : CSVParserParametrs/StringCellMakerException.cpp.obj
-
-CSVParserParametrs/StringCellMakerException.i: CSVParserParametrs/StringCellMakerException.cpp.i
-.PHONY : CSVParserParametrs/StringCellMakerException.i
-
-# target to preprocess a source file
-CSVParserParametrs/StringCellMakerException.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.i
-.PHONY : CSVParserParametrs/StringCellMakerException.cpp.i
-
-CSVParserParametrs/StringCellMakerException.s: CSVParserParametrs/StringCellMakerException.cpp.s
-.PHONY : CSVParserParametrs/StringCellMakerException.s
-
-# target to generate assembly for a file
-CSVParserParametrs/StringCellMakerException.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Lab_4.dir\build.make CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.s
-.PHONY : CSVParserParametrs/StringCellMakerException.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -329,15 +305,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Lab_4
-	@echo ... CSVParser.obj
-	@echo ... CSVParser.i
-	@echo ... CSVParser.s
 	@echo ... CSVParserParametrs/CSVCellMakerBuilderImpl.obj
 	@echo ... CSVParserParametrs/CSVCellMakerBuilderImpl.i
 	@echo ... CSVParserParametrs/CSVCellMakerBuilderImpl.s
-	@echo ... CSVParserParametrs/CSVStringCellMakerImpl.obj
-	@echo ... CSVParserParametrs/CSVStringCellMakerImpl.i
-	@echo ... CSVParserParametrs/CSVStringCellMakerImpl.s
+	@echo ... CSVParserParametrs/CSVStringCellMaker.obj
+	@echo ... CSVParserParametrs/CSVStringCellMaker.i
+	@echo ... CSVParserParametrs/CSVStringCellMaker.s
+	@echo ... CSVParserParametrs/CellMakeException.obj
+	@echo ... CSVParserParametrs/CellMakeException.i
+	@echo ... CSVParserParametrs/CellMakeException.s
 	@echo ... CSVParserParametrs/ColumnSeparatorCharacter.obj
 	@echo ... CSVParserParametrs/ColumnSeparatorCharacter.i
 	@echo ... CSVParserParametrs/ColumnSeparatorCharacter.s
@@ -347,9 +323,6 @@ help:
 	@echo ... CSVParserParametrs/ShieldingWatcher.obj
 	@echo ... CSVParserParametrs/ShieldingWatcher.i
 	@echo ... CSVParserParametrs/ShieldingWatcher.s
-	@echo ... CSVParserParametrs/StringCellMakerException.obj
-	@echo ... CSVParserParametrs/StringCellMakerException.i
-	@echo ... CSVParserParametrs/StringCellMakerException.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

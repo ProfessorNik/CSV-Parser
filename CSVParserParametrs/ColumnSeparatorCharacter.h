@@ -8,11 +8,10 @@
 
 class ColumnSeparatorCharacter {
 public:
-    ColumnSeparatorCharacter() { sep = ','; }
-    explicit ColumnSeparatorCharacter(char sep) : sep(sep) {}
+    explicit ColumnSeparatorCharacter(char sep = ',');
 
-    void setSeparator(char value) { this->sep = value; };
-    [[nodiscard]] bool isSeparator(char value) const { return value == sep; };
+    void setSeparator(char value);
+    [[nodiscard]] bool isSeparator(char value) const;
 private:
     char sep{};
 };

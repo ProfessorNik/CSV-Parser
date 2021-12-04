@@ -7,18 +7,17 @@
 ShieldingWatcher::ShieldingWatcher(char shieldingChar) : shieldingChar(shieldingChar){
     prevCharIsShielding = false;
     curCharIsShielding = false;
-    shieldingText = false;
-    counter = 0;
+    counterShieldingCharacters = 0;
 }
 
 void ShieldingWatcher::pushCharacter(char value) {
     prevCharIsShielding = curCharIsShielding;
     if(value == shieldingChar) {
         if (prevCharIsShielding) {
-            counter--;
+            counterShieldingCharacters--;
             curCharIsShielding = false;
         } else {
-            counter++;
+            counterShieldingCharacters++;
             curCharIsShielding = true;
         }
     } else{
@@ -32,5 +31,5 @@ bool ShieldingWatcher::isShieldingCharacter(char value) const {
 }
 
 bool ShieldingWatcher::isShieldingText() const {
-    return counter % 2;
+    return counterShieldingCharacters % 2;
 }

@@ -16,13 +16,10 @@ public:
     explicit ShieldingWatcher(char shieldingChar = '\"');
 
 private:
-    int counter;
+    int counterShieldingCharacters;
     char shieldingChar;
-    bool shieldingText;
     bool prevCharIsShielding;
     bool curCharIsShielding;
-    bool firstUsed{};
-
 };
 
 

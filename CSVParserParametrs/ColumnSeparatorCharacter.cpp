@@ -3,3 +3,13 @@
 //
 
 #include "ColumnSeparatorCharacter.h"
+
+ColumnSeparatorCharacter::ColumnSeparatorCharacter(char sep) : sep(sep) {}
+
+void ColumnSeparatorCharacter::setSeparator(char value) {
+    this->sep = value;
+}
+
+bool ColumnSeparatorCharacter::isSeparator(char value) const {
+    return value == sep;
+}

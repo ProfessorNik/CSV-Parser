@@ -8,11 +8,10 @@
 
 class RowSeparatorCharacter {
 public:
-    explicit RowSeparatorCharacter(char sep = '\n') : sep(sep) { }
+    explicit RowSeparatorCharacter(char sep = '\n');
 
-    void setSeparator(char value) { this->sep = value; }
-    [[nodiscard]] bool isSeparator(char value) const { return sep == value; }
-
+    void setSeparator(char value);
+    [[nodiscard]] bool isSeparator(char value);
 
 private:
     char sep{};

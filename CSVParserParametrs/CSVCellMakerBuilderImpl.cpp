@@ -4,6 +4,10 @@
 
 #include "CSVCellMakerBuilderImpl.h"
 
+CSVCellMakerBuilderImpl::CSVCellMakerBuilderImpl() : maker(new CSVStringCellMaker){
+
+}
+
 void CSVCellMakerBuilderImpl::setRowSeparator(char ch) {
     maker->setRowSeparator(ch);
 }
@@ -20,6 +24,4 @@ std::shared_ptr<CSVCellMaker> CSVCellMakerBuilderImpl::build() {
     return maker;
 }
 
-CSVCellMakerBuilderImpl::CSVCellMakerBuilderImpl() : maker(new CSVStringCellMakerImpl){
 
-}

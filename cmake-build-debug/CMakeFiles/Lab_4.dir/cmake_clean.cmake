@@ -1,11 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Lab_4.dir/CSVParser.cpp.obj"
   "CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.obj"
-  "CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj"
+  "CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMaker.cpp.obj"
+  "CMakeFiles/Lab_4.dir/CSVParserParametrs/CellMakeException.cpp.obj"
   "CMakeFiles/Lab_4.dir/CSVParserParametrs/ColumnSeparatorCharacter.cpp.obj"
   "CMakeFiles/Lab_4.dir/CSVParserParametrs/RowSeparatorCharacter.cpp.obj"
   "CMakeFiles/Lab_4.dir/CSVParserParametrs/ShieldingWatcher.cpp.obj"
-  "CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj"
   "CMakeFiles/Lab_4.dir/main.cpp.obj"
   "Lab_4.exe"
   "Lab_4.exe.manifest"

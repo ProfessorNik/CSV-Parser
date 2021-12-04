@@ -10,21 +10,27 @@
 #include <memory>
 #include <utility>
 #include <vector>
-#include "CSVLineParser.h"
+#include "CSVLazyParser.h"
 #include "CSVParserParametrs/CSVCellMaker.h"
-#include "CSVParserParametrs/CSVStringCellMakerImpl.h"
+#include "CSVParserParametrs/CSVStringCellMaker.h"
+#include "CSVParseException.h"
 
 
 template<class... Args>
 class CSVParser {
 public:
-    explicit CSVParser(const std::string& fileName, int skipFirstLinesCount = 0);
-    explicit CSVParser(const std::string& fileName, std::shared_ptr<CSVCellMaker> maker, int skipFirstLinesCount = 0):maker(std::move(maker)){
+    explicit CSVParser(const std::string& fileName, int skipFirstLinesCount = 0) : maker(new CSVStringCellMaker), skipFirsLinesCount(skipFirstLinesCount){
+        customizeInputStream(fileName);
+        parseFile();
+    }
+    explicit CSVParser(const std::string& fileName, std::shared_ptr<CSVCellMaker> maker, int skipFirstLinesCount = 0):maker(std::move(maker)), skipFirsLinesCount(skipFirstLinesCount){
         customizeInputStream(fileName);
         parseFile();
     }
 
-    virtual ~CSVParser();
+    virtual ~CSVParser() {
+        file.close();
+    }
 
     struct InputIterator{
         typedef typename std::tuple<Args...> value_type;
@@ -32,117 +38,81 @@ public:
         typedef value_type* pointer;
         typedef std::input_iterator_tag iterator_category;
 
-        explicit InputIterator(typename std::vector<std::tuple<Args...> >::iterator it);
-        InputIterator(const InputIterator& other);
+        explicit InputIterator(typename std::vector<std::tuple<Args...> >::iterator it){
+            this->it = it;
+        }
+        InputIterator(const InputIterator& other){
+            this->it = other.it;
+        }
 
-        InputIterator& operator++();
+        InputIterator& operator++() {
+            it++;
+            return *this;
+        }
 
-        //InputIterator operator++(int) const;
+        InputIterator operator++(int) const{
+            InputIterator tmp = *this;
+            ++(*this);
+            return tmp;
+        }
 
-        value_type operator*() const;
+        value_type operator*() const{
+            return *it;
+        }
 
-        bool operator==(const InputIterator&);
-        bool operator!=(const InputIterator&);
+        bool operator==(const InputIterator& other) {
+            return this->it == other.it;
+        }
+        bool operator!=(const InputIterator& other) {
+            return this->it != other.it;
+        }
+
     private:
         typename std::vector<std::tuple<Args...> >::iterator it;
     };
 
-    InputIterator begin();
-    InputIterator end();
+    InputIterator begin(){
+        return CSVParser::InputIterator(table.begin());
+    }
+
+    InputIterator end(){
+        return CSVParser::InputIterator(table.end());
+    }
 
 private:
     std::shared_ptr<CSVCellMaker> maker;
     std::vector<std::tuple<Args...>> table;
     std::ifstream file;
     int skipFirsLinesCount{};
-    int lineNumber{};
 
-    void customizeInputStream(const std::string& fileName);
+    void customizeInputStream(const std::string& fileName){
+        try {
+            file.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+            file.open(fileName);
+        }catch(const std::ifstream::failure& ex) {
+            throw CSVParseException(std::string("file ") + fileName + std::string(" isn't open"), 0, 0);
+        }
+    }
 
-    void goToBeginningFile();
+    void skipFirstLines(){
+        for(int i = 0; i < skipFirsLinesCount; i++){
+            std::string str;
+            std::getline(file, str);
+        }
+    }
 
-    void parseFile();
-
+    void parseFile() {
+        try {
+            skipFirstLines();
+            CSVLazyParser<Args...> parser(maker, file);
+            parser.parse();
+            table = parser.getTable();
+        } catch (const CSVLazyParseException& ex){
+            throw CSVParseException(ex.what(), ex.getRow() + skipFirsLinesCount, ex.getColumn());
+        }
+    }
 };
 
-template<class... Args>
-CSVParser<Args...>::CSVParser(const std::string &fileName, int skipFirstLinesCount) : maker(new CSVStringCellMakerImpl){
-    customizeInputStream(fileName);
-    parseFile();
-}
-
-
-template<class... Args>
-void CSVParser<Args...>::customizeInputStream(const std::string &fileName) {
-    file.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-    file.open(fileName);
-}
-
-template<class... Args>
-CSVParser<Args...>::~CSVParser() {
-    file.close();
-}
-
-template<class... Args>
-typename CSVParser<Args...>::InputIterator CSVParser<Args...>::begin() {
-    //goToBeginningFile();
-    return CSVParser::InputIterator(table.begin());
-}
-
-template<class... Args>
-void CSVParser<Args...>::goToBeginningFile() {
-    file.clear();
-    file.seekg(0);
-    for(int i = 0; i < skipFirsLinesCount; i++){
-        std::string str;
-        std::getline(file, str);
-    }
-}
-
-template<class... Args>
-CSVParser<Args...>::InputIterator::InputIterator(typename std::vector<std::tuple<Args...>>::iterator it) {
-    this->it = it;
-}
-
-template<class... Args>
-typename CSVParser<Args...>::InputIterator::value_type CSVParser<Args...>::InputIterator::operator*() const {
-    return *it;
-}
-
-
-template<class... Args>
-typename CSVParser<Args...>::InputIterator CSVParser<Args...>::end() {
-    return CSVParser::InputIterator(table.end());
-}
-
-template<class... Args>
-void CSVParser<Args...>::parseFile() {
-    goToBeginningFile();
-    CSVLineParser<Args...> parser(maker, file);
-    parser.parse();
-    table = parser.getTable();
-}
-
-template<class... Args>
-CSVParser<Args...>::InputIterator::InputIterator(const CSVParser::InputIterator &other) {
-    this->it = other.it;
-}
-
-template<class... Args>
-bool CSVParser<Args...>::InputIterator::operator==(const CSVParser::InputIterator &other) {
-    return this->it == other.it;
-}
-
-template<class... Args>
-bool CSVParser<Args...>::InputIterator::operator!=(const CSVParser::InputIterator &other) {
-    return this->it != other.it;
-}
-
-template<class... Args>
-typename CSVParser<Args...>::InputIterator &CSVParser<Args...>::InputIterator::operator++() {
-    it++;
-    return *this;
-}
 
 
 #endif //LAB_4_CSVPARSER_H

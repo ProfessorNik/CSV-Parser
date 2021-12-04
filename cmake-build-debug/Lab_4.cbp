@@ -80,10 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/progects/c++/Lab-4/CSVLineParser.h">
+		<Unit filename="C:/progects/c++/Lab-4/CSVException.h">
 			<Option target="Lab_4"/>
 		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParser.cpp">
+		<Unit filename="C:/progects/c++/Lab-4/CSVLazyParseException.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVLazyParser.h">
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CSVParser.h">
@@ -101,10 +104,16 @@
 		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h">
 			<Option target="Lab_4"/>
 		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.cpp">
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.cpp">
 			<Option target="Lab_4"/>
 		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h">
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CellMakeException.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CellMakeException.h">
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.cpp">
@@ -123,12 +132,6 @@
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h">
-			<Option target="Lab_4"/>
-		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.cpp">
-			<Option target="Lab_4"/>
-		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.h">
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/main.cpp">

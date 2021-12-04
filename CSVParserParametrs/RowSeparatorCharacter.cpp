@@ -3,3 +3,14 @@
 //
 
 #include "RowSeparatorCharacter.h"
+
+RowSeparatorCharacter::RowSeparatorCharacter(char sep) : sep(sep) { }
+
+void RowSeparatorCharacter::setSeparator(char value) {
+    this->sep = value;
+}
+
+bool RowSeparatorCharacter::isSeparator(char value) {
+    return sep == value;
+}
+

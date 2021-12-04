@@ -6,7 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/progects/c++/Lab-4/CSVLineParser.h
+C:/progects/c++/Lab-4/CSVException.h
+exception
+-
+string
+-
+
+C:/progects/c++/Lab-4/CSVLazyParseException.h
+CSVException.h
+C:/progects/c++/Lab-4/CSVException.h
+string
+-
+utility
+-
+
+C:/progects/c++/Lab-4/CSVLazyParser.h
 tuple
 -
 string
@@ -17,6 +31,14 @@ utility
 -
 CSVParserParametrs/CSVCellMaker.h
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
+CSVLazyParseException.h
+C:/progects/c++/Lab-4/CSVLazyParseException.h
+CSVParserParametrs/CellMakeException.h
+C:/progects/c++/Lab-4/CSVParserParametrs/CellMakeException.h
+
+C:/progects/c++/Lab-4/CSVParseException.h
+CSVException.h
+C:/progects/c++/Lab-4/CSVException.h
 
 C:/progects/c++/Lab-4/CSVParser.h
 string
@@ -29,12 +51,14 @@ utility
 -
 vector
 -
-CSVLineParser.h
-C:/progects/c++/Lab-4/CSVLineParser.h
+CSVLazyParser.h
+C:/progects/c++/Lab-4/CSVLazyParser.h
 CSVParserParametrs/CSVCellMaker.h
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
-CSVParserParametrs/CSVStringCellMakerImpl.h
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
+CSVParserParametrs/CSVStringCellMaker.h
+C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h
+CSVParseException.h
+C:/progects/c++/Lab-4/CSVParseException.h
 
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
 string
@@ -46,23 +70,13 @@ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
 memory
 C:/progects/c++/Lab-4/CSVParserParametrs/memory
 
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp
-CSVCellMakerBuilderImpl.h
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h
-
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h
 CSVCellMakerBuilder.h
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilder.h
-CSVStringCellMakerImpl.h
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
+CSVStringCellMaker.h
+C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h
 
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.cpp
-CSVStringCellMakerImpl.h
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
-StringCellMakerException.h
-C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.h
-
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
+C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h
 CSVCellMaker.h
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
 RowSeparatorCharacter.h
@@ -72,19 +86,21 @@ C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
 ShieldingWatcher.h
 C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
 
-C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
-
-C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.h
-
-C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
-
-C:/progects/c++/Lab-4/CSVParserParametrs/StringCellMakerException.h
+C:/progects/c++/Lab-4/CSVParserParametrs/CellMakeException.h
 exception
 -
 string
 -
 utility
 -
+../CSVException.h
+C:/progects/c++/Lab-4/CSVException.h
+
+C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
+
+C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.h
+
+C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
 
 C:/progects/c++/Lab-4/main.cpp
 iostream
@@ -101,12 +117,8 @@ tupleout.h
 C:/progects/c++/Lab-4/tupleout.h
 CSVParser.h
 C:/progects/c++/Lab-4/CSVParser.h
-CSVLineParser.h
-C:/progects/c++/Lab-4/CSVLineParser.h
 CSVParserParametrs/CSVCellMakerBuilderImpl.h
 C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h
-CSVParserParametrs/CSVCellMakerBuilder.h
-C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilder.h
 
 C:/progects/c++/Lab-4/tupleout.h
 
