@@ -6,6 +6,8 @@
 #include "tupleout.h"
 #include "CSVParser.h"
 #include "CSVLineParser.h"
+#include "CSVParserParametrs/CSVCellMakerBuilderImpl.h"
+#include "CSVParserParametrs/CSVCellMakerBuilder.h"
 //💙💙💙💙💙💙💙
 //template<class... Args>💙💙💙💙💙💙💙
 //class A{💙💙💙💙💙💙💙
@@ -27,7 +29,9 @@
 
 
 int main() {
-    CSVParser<std::string, int, double> parser("in.txt");
+    std::shared_ptr<CSVCellMakerBuilder> builder(new CSVCellMakerBuilderImpl());
+    builder->setColumnSeparator('|');
+    CSVParser<std::string, int, double> parser("in.txt", builder->build());
     for(auto t : parser){
         std::cout << t << std::endl;
     }

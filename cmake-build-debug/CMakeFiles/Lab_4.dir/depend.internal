@@ -3,8 +3,17 @@
 
 CMakeFiles/Lab_4.dir/CSVParser.cpp.obj
  C:/progects/c++/Lab-4/CSVParser.cpp
+CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp.obj
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilder.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/ShieldingWatcher.h
 CMakeFiles/Lab_4.dir/CSVParserParametrs/CSVStringCellMakerImpl.cpp.obj
- C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
  C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.cpp
  C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
  C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
@@ -26,7 +35,9 @@ CMakeFiles/Lab_4.dir/CSVParserParametrs/StringCellMakerException.cpp.obj
 CMakeFiles/Lab_4.dir/main.cpp.obj
  C:/progects/c++/Lab-4/CSVLineParser.h
  C:/progects/c++/Lab-4/CSVParser.h
- C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilder.h
+ C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h
  C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.h
  C:/progects/c++/Lab-4/CSVParserParametrs/ColumnSeparatorCharacter.h
  C:/progects/c++/Lab-4/CSVParserParametrs/RowSeparatorCharacter.h

@@ -2,12 +2,12 @@
 // Created by nikol on 30.11.2021.
 //
 
-#ifndef LAB_4_CSVSTRINGCELLMAKER_H
-#define LAB_4_CSVSTRINGCELLMAKER_H
+#ifndef LAB_4_CSVCELLMAKER_H
+#define LAB_4_CSVCELLMAKER_H
 
 #include <string>
 
-class CSVStringCellMaker {
+class CSVCellMaker {
 public:
     virtual bool hasCellMade() = 0;
     virtual bool hasRowEnd() = 0;
@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif //LAB_4_CSVSTRINGCELLMAKER_H
+#endif //LAB_4_CSVCELLMAKER_H

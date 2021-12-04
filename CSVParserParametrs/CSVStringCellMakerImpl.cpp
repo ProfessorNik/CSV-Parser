@@ -50,4 +50,16 @@ std::string CSVStringCellMakerImpl::getCellValue() {
     return tmp;
 }
 
+void CSVStringCellMakerImpl::setRowSeparator(char ch) {
+    rowSep.setSeparator(ch);
+}
+
+void CSVStringCellMakerImpl::setColumnSeparator(char ch) {
+    columnSep.setSeparator(ch);
+}
+
+void CSVStringCellMakerImpl::setShieldingCharacter(char ch) {
+    shieldingWatcher.setShieldingCharacter(ch);
+}
+
 

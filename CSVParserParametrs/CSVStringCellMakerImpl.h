@@ -5,12 +5,12 @@
 #ifndef LAB_4_CSVSTRINGCELLMAKERIMPL_H
 #define LAB_4_CSVSTRINGCELLMAKERIMPL_H
 
-#include "CSVStringCellMaker.h"
+#include "CSVCellMaker.h"
 #include "RowSeparatorCharacter.h"
 #include "ColumnSeparatorCharacter.h"
 #include "ShieldingWatcher.h"
 
-class CSVStringCellMakerImpl : public CSVStringCellMaker{
+class CSVStringCellMakerImpl : public CSVCellMaker{
 public:
     CSVStringCellMakerImpl();
 
@@ -19,6 +19,9 @@ public:
     void push(char value) override;
     std::string getCellValue() override;
 
+    void setRowSeparator(char ch);
+    void setColumnSeparator(char ch);
+    void setShieldingCharacter(char ch);
 private:
     std::string cell;
 

@@ -8,9 +8,10 @@
 #include <string>
 #include <fstream>
 #include <memory>
+#include <utility>
 #include <vector>
 #include "CSVLineParser.h"
-#include "CSVParserParametrs/CSVStringCellMaker.h"
+#include "CSVParserParametrs/CSVCellMaker.h"
 #include "CSVParserParametrs/CSVStringCellMakerImpl.h"
 
 
@@ -18,6 +19,10 @@ template<class... Args>
 class CSVParser {
 public:
     explicit CSVParser(const std::string& fileName, int skipFirstLinesCount = 0);
+    explicit CSVParser(const std::string& fileName, std::shared_ptr<CSVCellMaker> maker, int skipFirstLinesCount = 0):maker(std::move(maker)){
+        customizeInputStream(fileName);
+        parseFile();
+    }
 
     virtual ~CSVParser();
 
@@ -46,7 +51,7 @@ public:
     InputIterator end();
 
 private:
-    std::shared_ptr<CSVStringCellMaker> maker;
+    std::shared_ptr<CSVCellMaker> maker;
     std::vector<std::tuple<Args...>> table;
     std::ifstream file;
     int skipFirsLinesCount{};

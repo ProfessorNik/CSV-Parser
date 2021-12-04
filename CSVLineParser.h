@@ -9,7 +9,7 @@
 #include <string>
 #include <sstream>
 #include <utility>
-#include "CSVParserParametrs/CSVStringCellMaker.h"
+#include "CSVParserParametrs/CSVCellMaker.h"
 
 template <class... Args>
 class CSVLineParser {
@@ -27,7 +27,7 @@ public:
     }
 
 
-    explicit CSVLineParser(std::shared_ptr<CSVStringCellMaker> maker, std::ifstream& file) : maker(std::move(maker)), file(file){
+    explicit CSVLineParser(std::shared_ptr<CSVCellMaker> maker, std::ifstream& file) : maker(std::move(maker)), file(file){
         it = line.begin();
     }
 
@@ -37,10 +37,10 @@ private:
     std::string line;
 
     std::string::iterator it;
-    std::shared_ptr<CSVStringCellMaker> maker;
+    std::shared_ptr<CSVCellMaker> maker;
     std::ifstream& file;
     std::vector<std::tuple<Args...> > table;
-    bool flag;
+    bool flag{};
 
     char getNextCharacter(){
         if(it == line.end()) {
@@ -72,11 +72,14 @@ private:
     }
 
     template<size_t n>
-    void pushValue(std::tuple<Args...>& cells, const std::string& str){
-        std::stringstream stream(str);
-        stream.exceptions(std::stringstream::failbit);
-
-        stream >> std::get<n>(cells);
+    void pushValue(std::tuple<Args...>& cells, const std::string& str) {
+        try {
+            std::istringstream stream(str);
+            stream.exceptions(std::istringstream::failbit);
+            stream >> std::get<n>(cells);
+        }catch (...){
+            std::cout << "stream error" <<std::endl;
+        }
     }
 
     template<size_t n>
@@ -84,9 +87,14 @@ private:
         throw std::invalid_argument("bad argument");
     }
 
-
-
 };
+
+template<class charT, class trT, class T>
+typename std::enable_if<(std::is_same_v<T, std::string>), typename std::basic_istringstream<charT, trT>&>::type
+        operator>>(std::basic_istringstream<charT, trT>& st, T& t){
+    t = st.str();
+    return st;
+}
 
 
 #endif //LAB_4_CSVLINEPARSER_H

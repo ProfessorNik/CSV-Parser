@@ -21,11 +21,7 @@ void ShieldingWatcher::pushCharacter(char value) {
             counter++;
             curCharIsShielding = true;
         }
-    }
-    else if (prevCharIsShielding){
-        shieldingText = !shieldingText;
-        curCharIsShielding = false;
-    }else{
+    } else{
         curCharIsShielding = false;
     }
 

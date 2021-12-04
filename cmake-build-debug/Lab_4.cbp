@@ -89,7 +89,16 @@
 		<Unit filename="C:/progects/c++/Lab-4/CSVParser.h">
 			<Option target="Lab_4"/>
 		</Unit>
-		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMaker.h">
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMaker.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilder.h">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.cpp">
+			<Option target="Lab_4"/>
+		</Unit>
+		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVCellMakerBuilderImpl.h">
 			<Option target="Lab_4"/>
 		</Unit>
 		<Unit filename="C:/progects/c++/Lab-4/CSVParserParametrs/CSVStringCellMakerImpl.cpp">
